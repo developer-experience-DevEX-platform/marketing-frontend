@@ -1,0 +1,5 @@
+site_name: 'marketing-frontend'
+site_description: 'Frontend app for marketing'
+
+plugins:
+  - techdocs-core

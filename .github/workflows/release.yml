@@ -1,0 +1,34 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  ci:
+    permissions:
+      contents: read
+    uses: developer-experience-DevEX-platform/ci-cd-templates/.github/workflows/frontend-ci.yml@v1.9.0
+    secrets: inherit
+
+  release:
+    needs: ci
+    if: vars.STATIC_SITE_BUCKET != ''
+    permissions:
+      contents: read
+      id-token: write
+    uses: developer-experience-DevEX-platform/ci-cd-templates/.github/workflows/static-site-release.yml@v1.9.0
+
+  publish-docs:
+    needs: ci
+    if: vars.TECHDOCS_S3_BUCKET != ''
+    permissions:
+      contents: read
+      id-token: write
+    uses: developer-experience-DevEX-platform/ci-cd-templates/.github/workflows/techdocs-publish.yml@v1.9.0

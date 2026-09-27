@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches-ignore:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    permissions:
+      contents: read
+    uses: developer-experience-DevEX-platform/ci-cd-templates/.github/workflows/frontend-ci.yml@v1.9.0
+    secrets: inherit

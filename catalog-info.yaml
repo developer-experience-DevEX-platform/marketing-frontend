@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: marketing-frontend
+  description: Frontend app for marketing
+  annotations:
+    github.com/project-slug: developer-experience-DevEX-platform/marketing-frontend
+    backstage.io/techdocs-ref: url:https://github.com/developer-experience-DevEX-platform/marketing-frontend/tree/main/
+  links:
+    - title: Repository
+      url: https://github.com/developer-experience-DevEX-platform/marketing-frontend
+    - title: Infrastructure stack
+      url: https://github.com/developer-experience-DevEX-platform/platform-infrastructure/tree/main/services/marketing-frontend
+spec:
+  type: website
+  lifecycle: experimental
+  owner: group:default/developer-experience
