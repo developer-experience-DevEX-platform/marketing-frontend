@@ -17,5 +17,5 @@ jobs:
   ci:
     permissions:
       contents: read
-    uses: developer-experience-DevEX-platform/ci-cd-templates/.github/workflows/frontend-ci.yml@v1.9.0
+    uses: developer-experience-DevEX-platform/ci-cd-templates/.github/workflows/frontend-ci.yml@v1.10.0
     secrets: inherit
