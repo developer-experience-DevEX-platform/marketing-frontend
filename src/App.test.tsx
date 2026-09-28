@@ -7,7 +7,7 @@ describe('App', () => {
     window.__APP_CONFIG__ = { API_BASE_URL: '' };
     render(<App />);
     expect(screen.getByRole('heading').textContent).toBe(
-      'Hello from marketing-frontend',
+      'Welcome to marketing-frontend',
     );
     expect(screen.getByText('not configured')).toBeDefined();
   });

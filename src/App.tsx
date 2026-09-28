@@ -8,7 +8,7 @@ export function App() {
 
   return (
     <Page title={greet('marketing-frontend')}>
-      <p>{'Frontend app for marketing'}</p>
+      <p>{'Marketing site published through S3 and CloudFront'}</p>
       <p>
         API base URL:{' '}
         <span>{apiBaseUrl === '' ? 'not configured' : apiBaseUrl}</span>
