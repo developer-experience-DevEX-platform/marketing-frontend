@@ -14,7 +14,7 @@ jobs:
   ci:
     permissions:
       contents: read
-    uses: developer-experience-DevEX-platform/ci-cd-templates/.github/workflows/frontend-ci.yml@v1.10.0
+    uses: developer-experience-DevEX-platform/ci-cd-templates/.github/workflows/frontend-ci.yml@v1.11.0
     secrets: inherit
 
   release:
@@ -23,7 +23,7 @@ jobs:
     permissions:
       contents: read
       id-token: write
-    uses: developer-experience-DevEX-platform/ci-cd-templates/.github/workflows/static-site-release.yml@v1.10.0
+    uses: developer-experience-DevEX-platform/ci-cd-templates/.github/workflows/static-site-release.yml@v1.11.0
 
   publish-docs:
     needs: ci
@@ -31,4 +31,4 @@ jobs:
     permissions:
       contents: read
       id-token: write
-    uses: developer-experience-DevEX-platform/ci-cd-templates/.github/workflows/techdocs-publish.yml@v1.10.0
+    uses: developer-experience-DevEX-platform/ci-cd-templates/.github/workflows/techdocs-publish.yml@v1.11.0
