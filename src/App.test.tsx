@@ -9,6 +9,11 @@ describe('App', () => {
     expect(screen.getByRole('heading').textContent).toBe(
       'Welcome to marketing-frontend',
     );
+    expect(
+      screen.getByText(
+        'Cache check: this copy should appear after invalidation',
+      ),
+    ).toBeDefined();
     expect(screen.getByText('not configured')).toBeDefined();
   });
 });
