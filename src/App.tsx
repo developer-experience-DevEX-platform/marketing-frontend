@@ -8,7 +8,7 @@ export function App() {
 
   return (
     <Page title={greet('marketing-frontend')}>
-      <p>{'Marketing site published through S3 and CloudFront'}</p>
+      <p>{'Cache check: this copy should appear after invalidation'}</p>
       <p>
         API base URL:{' '}
         <span>{apiBaseUrl === '' ? 'not configured' : apiBaseUrl}</span>
